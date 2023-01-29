@@ -5,7 +5,7 @@
 
 html {
 	@include fluid-type(font-size, Em(320px), Em(1600px), Rem(15px), Rem(19px));
-	
+
 	@media (prefers-reduced-motion: no-preference) {
 		scroll-behavior: smooth;
 	}
@@ -13,19 +13,22 @@ html {
 
 body {
 	color: $font-color;
-	font-family: "Mulish", sans-serif;
+	font-family: 'Mulish', sans-serif;
 	margin: 0;
 	line-height: 1.5;
 
 	padding-top: $header-size;
-	
+
 	&.noscroll {
 		overflow: hidden;
+		@include from-landscape {
+			overflow: visible;
+		}
 	}
 
 	@include from-landscape {
-    padding-top: 0;
-  }
+		padding-top: 0;
+	}
 }
 
 h1,
