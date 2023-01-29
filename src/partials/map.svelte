@@ -1,3 +1,4 @@
+<!-- @TODO: Hide if fails to load -->
 <iframe
 	id="mapa"
 	class="map"

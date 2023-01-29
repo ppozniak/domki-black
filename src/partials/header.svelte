@@ -5,8 +5,7 @@ import { toggleNav, navOpened } from "$lib/store";
 <header class="site-header">
 	<div class="container">
 		<div class="site-header__body">
-			<!-- svelte-ignore a11y-invalid-attribute -->
-			<a href="#">
+			<a href="#top">
 				<h1 class="site-logo">
 					<svg class="site-logo__image" viewBox="0 0 182.08 63.98">
 						<title>Black Sarbinowo</title>

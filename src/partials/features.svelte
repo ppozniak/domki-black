@@ -1,3 +1,5 @@
+<!-- @TODO: Use icon system, not inline. -->
+
 <section id="domki" class="houses section divider">
 	<div class="container">
 		<h3>Domki</h3>

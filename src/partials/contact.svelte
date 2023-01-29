@@ -1,3 +1,5 @@
+<!-- @TODO: Use formspree API instead of action -->
+
 <section id="kontakt" class="section contact">
 	<div class="container">
 		<h3>Kontakt</h3>

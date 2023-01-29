@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
@@ -16,7 +16,7 @@
 			property="og:description"
 			content="Nowoczesne i komfortowe domki letniskowe 6-cio osobowe, położone w nadmorskiej, a jednocześnie kameralnej i urokliwej miejscowości Sarbinowo."
 		/>
-				<meta property="og:type" content="website" />
+		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://domki-black.pl" />
 		<meta property="og:image" content="http://domki-black.pl/images/domki.jpg" />
 
@@ -43,8 +43,8 @@
 		</script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96379415-3"></script>
-		<script>
+		<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-96379415-3"></script>
+		<script defer>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
@@ -63,7 +63,7 @@
 
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body data-sveltekit-preload-data="hover" id="top">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
