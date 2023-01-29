@@ -1,5 +1,5 @@
-<nav>
-  <a href="/">Home</a>
-</nav>
+<script lang="ts">
+  import '../styles/global.scss';
+</script>
 
 <slot></slot>

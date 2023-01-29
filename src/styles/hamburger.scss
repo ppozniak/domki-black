@@ -1,0 +1,14 @@
+@import './utils';
+
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: Rem(34px);
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 7px;
+$hamburger-layer-color: $black;
+$hamburger-layer-border-radius: Rem(1px);
+$hamburger-hover-opacity: 1;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: ease-out;
+
+@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";

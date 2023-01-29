@@ -1,0 +1,30 @@
+@use "sass:math";
+
+// Base colors
+$light-gray: #fefefe;
+$grayish-blue: #f7f7fc;
+$gray: #d3dbde;
+$black: #191919;
+$navgray: #e6ecee;
+$blue: #0066ff;
+$light-black: #1f2121;
+$font-color: $black;
+$base-font: 16px;
+
+@function Em($px) {
+  @return math.div($px, $base-font) * 1em;
+}
+
+@function Rem($px) {
+  @return math.div($px, $base-font) * 1rem;
+}
+
+$header-size: Rem(65px);
+$nav-width: Rem(200px);
+$vflow: 1.7rem;
+
+$mobile: Em(599px);
+$portrait: Em(600px);
+$landscape: Em(1000px);
+$desktop: Em(1200px);
+$desktop-wide: Em(1800px);
