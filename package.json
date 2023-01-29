@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"baguettebox.js": "^1.11.1",
 		"hamburgers": "^1.2.1"
 	}
 }
