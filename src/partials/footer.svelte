@@ -4,8 +4,8 @@
 	<br />
 	<small class="ref"
 		>Wykonanie:
-		<a class="ref-link" href="https://bluebracket.net" rel="noopener" target="_blank">
-			<span>blue</span>bracket</a
+		<a class="ref-link" href="https://ppozniak.dev" rel="noreferrer" target="_blank">
+			<span>p</span>pozniak.dev</a
 		>
 	</small>
 </footer>

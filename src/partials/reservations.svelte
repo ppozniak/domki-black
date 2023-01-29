@@ -8,7 +8,7 @@
 		</p>
 		<p>
 			<strong>Prosimy o zapoznanie się z regulaminem ośrodka: </strong>
-			<a class="link" target="_blank" href="regulamin.pdf"
+			<a class="link" target="_blank" href="/regulamin.pdf"
 				>Kliknij tutaj żeby przeczytać regulamin.</a
 			>
 		</p>
