@@ -1,6 +1,10 @@
+<script lang="ts">
+	export let title: string = 'Twoje miejsce blisko morza.';
+</script>
+
 <section class="section hero">
 	<div class="container">
-		<h2 class="hero__title">Twoje miejsce blisko morza.</h2>
+		<h2 class="hero__title">{title}</h2>
 	</div>
 
 	<div class="features">
