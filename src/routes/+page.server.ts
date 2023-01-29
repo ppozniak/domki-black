@@ -1,8 +1,7 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 
-export const load = (() => {
-	return {
-		title: 'Hello world!',
-		content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
-	};
-}) satisfies PageLoad;
+export const load = (async ({ fetch }) => {
+	const res = await fetch(`/content.json`);
+	const item = await res.json();
+	return item;
+}) satisfies PageServerLoad;
