@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { formatCurrency } from "$lib/format";
+
 	type Price = [string, number]
 
 	export let prices: Price[] = [];
@@ -19,7 +21,7 @@
 				{#each prices as [name, value]}
 					<tr>
 						<td class="season-cell">{name}</td>
-						<td class="price-cell">{value.toLocaleString('pl', { style: 'currency', currency: 'PLN', minimumFractionDigits: 0, maximumFractionDigits: 2 })}</td>
+						<td class="price-cell">{formatCurrency(value)}</td>
 					</tr>
 				{/each}
 			</tbody>
