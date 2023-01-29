@@ -8,13 +8,17 @@
 	import ContactUs from '../partials/contact.svelte';
 	import Map from '../partials/map.svelte';
 	import Footer from '../partials/footer.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+	const prices = Object.entries(data);
 </script>
 
 <main>
 	<Hero />
 	<About />
 	<Features />
-	<Pricing />
+	<Pricing prices={prices} />
 	<Gallery />
 	<Reservations />
 	<ContactUs />
