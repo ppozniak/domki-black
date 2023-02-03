@@ -74,7 +74,7 @@
 				<textarea required name="message" id="message" cols="30" rows="10" class="textarea" autocomplete="off" />
 			</div>
 
-			<button class="button button--invert button--full">Wyślij</button>
+			<button class="button button--inverted button--full">Wyślij</button>
 		</form>
 	</div>
 </section>

@@ -31,7 +31,7 @@
 
 	onMount(() => {
 		baguetteBox.run('.gallery', {
-			filter: new RegExp(),
+			filter: new RegExp(''),
 		})
 	})
 </script>
