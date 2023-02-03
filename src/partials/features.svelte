@@ -1,10 +1,13 @@
 <!-- @TODO: Use icon system, not inline. -->
+<script lang="ts">
+	import domkiImg from '$lib/images/domki.jpg?webp&imagetools'
+</script>
 
 <section id="domki" class="houses section divider">
 	<div class="container">
 		<h3>Domki</h3>
 		<div class="houses__pair">
-			<img class="img--fluid houses__intro-image" src="images/domki.jpg" alt="" />
+			<img class="img--fluid houses__intro-image" src={domkiImg} alt="" />
 			<div class="amenities">
 				<h4 class="amenities__title">Wyposażenie</h4>
 				<ul class="amenities__list">

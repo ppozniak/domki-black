@@ -1,36 +1,49 @@
 <script>
-	import { browser } from '$app/environment'
+	// @ts-ignore - There are no types for this library
 	import baguetteBox from 'baguettebox.js';
+	import { onMount } from 'svelte';
 
-	export const images = [
-		'kuchnia',
-		'sal',
-		'laz',
-		'laz2',
-		'syp1',
-		'syp2',
-		'schody',
-		'taras',
-		'rowery',
-		'plac',
-		'morze3'
-	];
+	import KuchniaImg from '$lib/images/kuchnia.jpg?width=280;1000&format=webp&imagetools';
+	import SalonImg from '$lib/images/salon.jpg?width=280;1000&format=webp&imagetools';
+	import LazienkaImg from '$lib/images/lazienka.jpg?width=280;1000&format=webp&imagetools';
+	import Lazienka2Img from '$lib/images/lazienka2.jpg?width=280;1000&format=webp&imagetools';
+	import SypialniaImg from '$lib/images/sypialnia.jpg?width=280;1000&format=webp&imagetools';
+	import Sypialnia2Img from '$lib/images/sypialnia2.jpg?width=280;1000&format=webp&imagetools';
+	import SchodyImg from '$lib/images/schody.jpg?width=280;1000&format=webp&imagetools';
+	import TarasImg from '$lib/images/taras.jpg?width=280;1000&format=webp&imagetools';
+	import RoweryImg from '$lib/images/rowery.jpg?width=280;1000&format=webp&imagetools';
+	import PlacImg from '$lib/images/plac.jpg?width=280;1000&format=webp&imagetools';
+	import Morze3Img from '$lib/images/morze3.jpg?width=280;1000&format=webp&imagetools';
 
-	if (browser) {
-		baguetteBox.run('.gallery')
-	}
+	const imgList = [
+		KuchniaImg,
+		SalonImg,
+		LazienkaImg,
+		Lazienka2Img,
+		SypialniaImg,
+		Sypialnia2Img,
+		SchodyImg,
+		TarasImg,
+		RoweryImg,
+		PlacImg,
+		Morze3Img,
+	]
+
+	onMount(() => {
+		baguetteBox.run('.gallery', {
+			filter: /.*@imagetools.*/i,
+		})
+	})
 </script>
-
-<!-- @TODO: Gallery is not working -->
 
 <section id="galeria" class="section divider">
 	<div class="container">
 		<h3>Galeria</h3>
 		<div class="gallery">
-			{#each images as image}
-				<a class="gallery__link" href="images/{image}.jpg" target="_blank" rel="noreferrer">
+			{#each imgList as [thumb, image]}
+				<a class="gallery__link" href={image} target="_blank" rel="noreferrer">
 					<span class="sr-only">Otwórz galerię</span>
-					<img class="gallery__thumbnail" src="images/thumbnails/{image}_tn.jpg" alt="" />
+					<img class="gallery__thumbnail" src={thumb} alt="" />
 				</a>
 			{/each}
 			<!-- <a class="gallery__link gallery__more" href="#">Więcej zdjęć...</a> -->
@@ -49,13 +62,13 @@
 
 	.gallery__link {
 		flex: 1 1 50%;
-		transition: border-width 0.3s ease-out;
+		transition: opacity 0.15s ease-out;
 		height: Rem(175px);
 		border: math.div($vflow, 8) solid transparent;
+		cursor: zoom-in;
 		&:hover,
 		&:focus {
-			border-width: 0;
-			font-size: 1rem;
+			opacity: .8;
 		}
 		@include from-portrait {
 			flex-basis: 25%;
@@ -64,6 +77,13 @@
 		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 			max-width: 25%;
 		}
+	}
+
+	.gallery__thumbnail {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	// @TODO: Unused
@@ -79,11 +99,4 @@
 	// 	font-size: 0.9rem;
 	// 	background-clip: content-box;
 	// }
-
-	.gallery__thumbnail {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 </style>

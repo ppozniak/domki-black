@@ -1,8 +1,11 @@
 <script lang="ts">
 	export let title: string = 'Twoje miejsce blisko morza.';
+
+	import heroImgMobile from '$lib/images/hero--mobile.jpg?webp&quality=90&imagetools';
+	import heroImgDesktop from '$lib/images/hero--desktop.jpg?webp&quality=90&imagetools';
 </script>
 
-<section class="section hero">
+<section class="section hero" style="--image-mobile: url({heroImgMobile}); --image-desktop: url({heroImgDesktop});">
 	<div class="container">
 		<h2 class="hero__title">{title}</h2>
 	</div>
@@ -86,7 +89,7 @@
 				rgba(#fff, $overlay-min-opacity),
 				rgba(#fff, $overlay-max-opacity)
 			),
-			url(/images/hero--mobile.jpg) no-repeat top center/cover fixed;
+			var(--image-mobile) no-repeat top center/cover fixed;
 		color: #fff;
 		box-sizing: border-box;
 		text-align: center;
@@ -100,7 +103,7 @@
 					rgba(#fff, $overlay-min-opacity),
 					rgba(#fff, $overlay-max-opacity)
 				),
-				url(/images/hero--desktop.jpg);
+				var(--image-desktop);
 		}
 	}
 
