@@ -77,7 +77,7 @@ import LogoSvg from '$lib/images/LogoBlack.svg?component';
 		margin-right: auto;
 	}
 
-	.site-logo__image {
+	:global(.site-logo__image) {
 		display: block;
 		height: 100%;
 		width: auto;
