@@ -6,6 +6,7 @@
 	import RefrigeratorIcon from '$lib/icons/refrigerator.svg?component';
 	import InductionOvenIcon from '$lib/icons/induction-oven.svg?component';
 	import KettleIcon from '$lib/icons/kettle.svg?component';
+	import MicrowaveIcon from '$lib/icons/microwave.svg?component';
 	import PotIcon from '$lib/icons/pot.svg?component';
 	import UtensilsIcon from '$lib/icons/utensils.svg?component';
 	import WifiIcon from '$lib/icons/wifi.svg?component';
@@ -42,6 +43,10 @@
 						Czajnik elektryczny
 					</li>
 					<li>
+						<MicrowaveIcon />
+						Mikrofalówka
+					</li>
+					<li>
 						<PotIcon />
 						Zestaw garnków
 					</li>
@@ -68,11 +73,6 @@
 					<li>
 						<ParkingIcon />
 						Miejsce parkingowe w cenie
-					</li>
-					<li>
-						<!-- @TODO: Add icon -->
-						<InductionOvenIcon />
-						Mikrofalówka
 					</li>
 				</ul>
 			</div>
