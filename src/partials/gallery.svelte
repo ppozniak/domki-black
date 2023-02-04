@@ -36,10 +36,10 @@
 	})
 </script>
 
-<section id="galeria" class="section divider">
+<section id="galeria" class="section divider gallery">
 	<div class="container">
 		<h3>Galeria</h3>
-		<div class="gallery">
+		<div class="gallery__wrapper">
 			{#each imgList as [thumb, image]}
 				<a class="gallery__link" href={image} target="_blank" rel="noreferrer">
 					<span class="sr-only">Otwórz galerię</span>
@@ -56,6 +56,10 @@
 	@import '../styles/utils';
 
 	.gallery {
+		background-color: $light-gray;
+	}
+
+	.gallery__wrapper {
 		display: flex;
 		flex-wrap: wrap;
 	}

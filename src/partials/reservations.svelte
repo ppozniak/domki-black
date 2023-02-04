@@ -18,6 +18,10 @@
 <style lang="scss">
 	@import '../styles/utils';
 
+	.reservations {
+		background-color: $light-gray;
+	}
+
 	.toc {
 		font-size: Rem(17px);
 	}

@@ -147,6 +147,8 @@
 		resize: vertical;
 		border-left: 0.3rem solid $black;
 		transition: border-left-width 0.15s ease-out;
+		border-radius: 8px;
+		
 		&:focus {
 			border-left-width: 0.75rem;
 		}

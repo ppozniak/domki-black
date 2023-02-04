@@ -27,12 +27,14 @@
 			</tbody>
 		</table>
 	</div>
+	<!-- @TODO: Add CTA to contact as a journey -->
 </section>
 
 <style lang="scss">
 	@import '../styles/utils';
 
 	.section.pricing {
+		background-color: $light-gray;
 		font-size: Rem(16px);
 		h3 {
 			text-align: center;

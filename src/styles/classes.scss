@@ -7,7 +7,7 @@
 	color: $black;
 	font-weight: bold;
 	text-align: center;
-	padding: Rem(10px) Rem(13px);
+	padding: Rem(14px) Rem(18px);
 	border: 1px solid $black;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -16,6 +16,7 @@
 	transition-property: background-color, color;
 	border: none;
 	cursor: pointer;
+	border-radius: 8px;
 	&:hover,
 	&:focus {
 		background-color: $black;
