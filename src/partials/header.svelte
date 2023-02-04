@@ -8,7 +8,7 @@ import LogoSvg from '$lib/images/LogoBlack.svg?component';
 		<div class="site-header__body">
 			<a href="#top">
 				<h1 class="site-logo">
-						<LogoSvg   />
+						<LogoSvg class="site-logo__image"/>
 				</h1>
 			</a>
 			<button class="site-nav-toggle" type="button" on:click={toggleNav}>
