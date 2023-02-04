@@ -103,7 +103,11 @@
 					rgba(#fff, $overlay-min-opacity),
 					rgba(#fff, $overlay-max-opacity)
 				),
-				var(--image-desktop);
+		}
+
+		// Fix for iOS background cover + fixed being blurred
+		@supports (-webkit-touch-callout: inherit) {
+			background-attachment: scroll;
 		}
 	}
 
