@@ -23,8 +23,6 @@
 				// @TODO: Handle data invalidation
 
 				return async ({ result, update }) => {
-					console.log("🚀 ~ file: contact.svelte:32 ~ return ~ result", result)
-
 					if (result.type === 'success') {
 						if (result?.data?.success) {
 							successMessage = result?.data?.success;

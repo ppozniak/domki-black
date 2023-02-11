@@ -39,3 +39,5 @@ export const actions = {
 		}
 	}
 } satisfies Actions;
+
+export const prerender = false;
