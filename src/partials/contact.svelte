@@ -1,8 +1,11 @@
 <script lang="ts">
 	import PhoneIcon from '$lib/icons/phone.svg?component';
 	import MailIcon from '$lib/icons/mail.svg?component';
+	import { enhance } from '$app/forms';
 
-	// <!-- @TODO: Use formspree API instead of action -->
+	let errorMessage: string = '';
+	let successMessage: string = '';
+	let loading: boolean = false;
 </script>
 
 <section id="kontakt" class="section contact">
@@ -10,8 +13,32 @@
 		<h3>Kontakt</h3>
 		<form
 			class="contact__form"
-			action="https://formspree.io/black.sarbinowo@gmail.com"
+			action="/api/email"
 			method="POST"
+			use:enhance={({ form, data, action, cancel }, ) => {
+				errorMessage = '';
+				successMessage = '';
+				loading = true;
+
+				// @TODO: Handle data invalidation
+
+				return async ({ result, update }) => {
+					console.log("🚀 ~ file: contact.svelte:32 ~ return ~ result", result)
+
+					if (result.type === 'success') {
+						if (result?.data?.success) {
+							successMessage = result?.data?.success;
+							update();
+						} else {
+							errorMessage = result?.data?.error;
+						}
+					} else if (result.type === 'error') {
+						errorMessage = "Przepraszamy, ale wystąpił problem techniczny. Prosimy o sprawdzenie połączenia z Internetem i spróbowanie ponownie później."
+					}
+
+					loading = false;
+				};
+			}}
 		>
 			<input type="hidden" name="_language" value="pl" />
 			<input type="hidden" name="_format" value="plain" />
@@ -42,7 +69,15 @@
 							>Imię i nazwisko:
 							<sup>*</sup>
 						</label>
-						<input required type="text" name="name" class="field__input" id="name" autocomplete="name" />
+						<input
+							required
+							type="text"
+							name="name"
+							class="field__input"
+							id="name"
+							autocomplete="name"
+							disabled={loading}
+						/>
 					</div>
 
 					<div class="field">
@@ -50,7 +85,15 @@
 							>Email:
 							<sup>*</sup>
 						</label>
-						<input required type="email" name="email" class="field__input" id="email" autocomplete="email" />
+						<input
+							required
+							type="email"
+							name="email"
+							class="field__input"
+							id="email"
+							autocomplete="email"
+							disabled={loading}
+						/>
 					</div>
 
 					<div class="field">
@@ -58,7 +101,15 @@
 							>Nr telefonu:
 							<sup>*</sup>
 						</label>
-						<input required type="tel" id="phone" name="phone" class="field__input" autocomplete="tel" />
+						<input
+							required
+							type="tel"
+							id="phone"
+							name="phone"
+							class="field__input"
+							autocomplete="tel"
+							disabled={loading}
+						/>
 					</div>
 				</div>
 			</div>
@@ -68,16 +119,35 @@
 					>Wiadomość:
 					<sup>*</sup>
 				</label>
-				<textarea required name="message" id="message" cols="30" rows="10" class="textarea" autocomplete="off" />
+				<textarea
+					required
+					name="message"
+					id="message"
+					cols="30"
+					rows="10"
+					class="textarea"
+					autocomplete="off"
+					disabled={loading}
+				/>
 			</div>
 
-			<button class="button button--inverted button--full">Wyślij</button>
+			{#if errorMessage}
+				<p class="text--error">
+					{errorMessage}
+				</p>
+			{/if}
+
+			{#if successMessage}
+				<p class="text--success">{successMessage}</p>
+			{/if}
+
+			<button disabled={loading} class="button button--inverted button--full">Wyślij</button>
 		</form>
 	</div>
 </section>
 
 <style lang="scss">
-	@use "sass:math";
+	@use 'sass:math';
 	@import '../styles/utils';
 
 	.contact {
@@ -111,7 +181,7 @@
 			vertical-align: middle;
 			margin-right: 0.3rem;
 		}
-		
+
 		@include from-portrait {
 			order: 1;
 			margin-left: $vflow;
@@ -145,19 +215,26 @@
 		display: block;
 		width: 100%;
 		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
 		font-size: 1.1rem;
 		padding: Rem(6px);
 		border: 1px solid $black;
 		font-family: inherit;
 		resize: vertical;
 		border-left: 0.3rem solid $black;
-		transition: border-left-width 0.15s ease-out;
-		border-radius: 8px;
-		
-		&:focus {
+		transition: 0.15s ease-out;
+		transition-property: border-left-width, background-color, opacity;
+		will-change: border-left-width;
+		border-radius: 4px;
+		background-color: #fff;
+
+		&:not(:disabled):focus {
 			border-left-width: 0.75rem;
+		}
+
+		&:disabled {
+			opacity: .7;
+			cursor: not-allowed;
+			background-color: $light-gray;
 		}
 	}
 

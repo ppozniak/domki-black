@@ -37,7 +37,7 @@
 	<ul class="site-nav__list">
 		{#each navItems as navItem}
 			<li class="site-nav__item">
-				<a class="site-nav__link" href={navItem.href} on:click={closeNav}>{navItem.label}</a>
+				<a class="site-nav__link" href={`/${navItem.href}`} on:click={closeNav}>{navItem.label}</a>
 			</li>
 		{/each}
 	</ul>

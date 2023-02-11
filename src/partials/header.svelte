@@ -6,7 +6,7 @@ import LogoSvg from '$lib/images/LogoBlack.svg?component';
 <header class="site-header">
 	<div class="container">
 		<div class="site-header__body">
-			<a href="#top">
+			<a href="/#top">
 				<h1 class="site-logo">
 						<LogoSvg class="site-logo__image"/>
 				</h1>
@@ -15,7 +15,7 @@ import LogoSvg from '$lib/images/LogoBlack.svg?component';
 				<span class="hamburger hamburger--spin" class:is-active="{$navOpened}">
 					<span class="hamburger-box">
 						<span class="hamburger-inner" />
-						<span class="sr-only">Otworz lub zamknij menu</span>
+						<span class="sr-only">Otwórz lub zamknij menu</span>
 					</span>
 				</span>
 			</button>

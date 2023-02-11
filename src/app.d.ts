@@ -43,4 +43,6 @@ declare global {
 	}
 }
 
-export {};
+type Prices = [string, number];
+
+export { Prices };

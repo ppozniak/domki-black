@@ -17,10 +17,16 @@
 	border: none;
 	cursor: pointer;
 	border-radius: 8px;
-	&:hover,
-	&:focus {
+
+	&:not(:disabled):hover,
+	&:not(:disabled):focus {
 		background-color: $black;
 		color: #fff;
+	}
+
+	&:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
 	}
 }
 
@@ -95,6 +101,16 @@
 
 .text--center {
 	text-align: center;
+}
+
+.text--error {
+	font-weight: bold;
+	color: #9d3b25;
+}
+
+.text--success {
+	font-weight: bold;
+	color: #2079ff;
 }
 
 .img--fluid {
