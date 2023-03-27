@@ -8,8 +8,11 @@
 		</p>
 		<p>
 			<strong>Prosimy o zapoznanie się z regulaminem ośrodka: </strong>
-			<a class="link" target="_blank" href="/regulamin.pdf"
-				>Kliknij tutaj żeby przeczytać regulamin.</a
+			<a
+				class="link"
+				target="_blank"
+				href="https://docs.google.com/document/d/e/2PACX-1vQfa0jWJoIc3RpHTfXgYbFMYrBIJX-lwwI2oPdCggp7RwNviilFN1oqRSb2qhznnazLVvYB0fp8vWlw/pub"
+				rel="noreferrer">Kliknij tutaj żeby przeczytać regulamin.</a
 			>
 		</p>
 	</div>
