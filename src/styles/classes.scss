@@ -20,8 +20,7 @@
 
 	&:not(:disabled):hover,
 	&:not(:disabled):focus {
-		background-color: $black;
-		color: #fff;
+		background-color: $navgray;
 	}
 
 	&:disabled {
@@ -33,10 +32,9 @@
 .button--inverted {
 	background-color: $black;
 	color: #fff;
-	&:hover,
-	&:focus {
-		color: $black;
-		background-color: #fff;
+	&:not(:disabled):hover,
+	&:not(:disabled):focus {
+		background-color: $light-black;
 	}
 }
 
