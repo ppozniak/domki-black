@@ -2,8 +2,10 @@
 <iframe
 	id="mapa"
 	class="map"
-	src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0--fKzhnyUzG9d6he_AkjSWWzFtbDkEo&q=Wrzosowa+6,Sarbinowo&zoom=13"
+	src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0--fKzhnyUzG9d6he_AkjSWWzFtbDkEo&q=Domki+Black+Sarbinowo,Wrzosowa+6,Sarbinowo&zoom=13"
 	allowfullscreen
+	referrerpolicy="no-referrer-when-downgrade"
+	loading="lazy"
 	title="Mapa Sarbinowo"
 />
 

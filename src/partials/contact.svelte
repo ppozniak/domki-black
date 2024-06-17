@@ -15,7 +15,7 @@
 			class="contact__form"
 			action="/api/email"
 			method="POST"
-			use:enhance={({ form, data, action, cancel }, ) => {
+			use:enhance={({ form, data, action, cancel }) => {
 				errorMessage = '';
 				successMessage = '';
 				loading = true;
@@ -31,7 +31,8 @@
 							errorMessage = result?.data?.error;
 						}
 					} else if (result.type === 'error') {
-						errorMessage = "Przepraszamy, ale wystąpił problem techniczny. Prosimy o sprawdzenie połączenia z Internetem i spróbowanie ponownie później."
+						errorMessage =
+							'Przepraszamy, ale wystąpił problem techniczny. Prosimy o sprawdzenie połączenia z Internetem i spróbowanie ponownie później.';
 					}
 
 					loading = false;
@@ -44,7 +45,14 @@
 
 			<div class="contact__group">
 				<ul class="contact__list divider">
-					<li>Wrzosowa 6, 76-034 Sarbinowo</li>
+					<li>
+						<a
+							href="https://maps.app.goo.gl/55q69wUP4qRiZKnJ9"
+							target="_blank"
+							rel="noreferrer"
+							class="link">Wrzosowa 6, 76-034 Sarbinowo</a
+						>
+					</li>
 					<li>
 						<span class="sr-only">Numer telefonu komórkowego: </span>
 						<PhoneIcon />
@@ -230,7 +238,7 @@
 		}
 
 		&:disabled {
-			opacity: .7;
+			opacity: 0.7;
 			cursor: not-allowed;
 			background-color: $light-gray;
 		}

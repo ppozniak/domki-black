@@ -1,5 +1,5 @@
 <script lang="ts">
-	import domkiImg from '$lib/images/domki.jpg?webp&imagetools';
+	import eqImg from '$lib/images/eq.jpg?width=400&webp&imagetools';
 
 	import GrillIcon from '$lib/icons/grill.svg?component';
 	import TvIcon from '$lib/icons/tv.svg?component';
@@ -22,7 +22,7 @@
 	<div class="container">
 		<h3>Domki</h3>
 		<div class="houses__pair">
-			<img class="img--fluid houses__intro-image" src={domkiImg} alt="" />
+			<img class="img--fluid houses__intro-image" src={eqImg} alt="" />
 			<div class="amenities">
 				<h4 class="amenities__title">Wyposażenie</h4>
 				<ul class="amenities__list">

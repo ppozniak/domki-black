@@ -3,37 +3,40 @@
 	import baguetteBox from 'baguettebox.js';
 	import { onMount } from 'svelte';
 
-	import KuchniaImg from '$lib/images/kuchnia.jpg?width=280;1000&format=webp&imagetools';
-	import SalonImg from '$lib/images/salon.jpg?width=280;1000&format=webp&imagetools';
-	import LazienkaImg from '$lib/images/lazienka.jpg?width=280;1000&format=webp&imagetools';
-	import Lazienka2Img from '$lib/images/lazienka2.jpg?width=280;1000&format=webp&imagetools';
-	import SypialniaImg from '$lib/images/sypialnia.jpg?width=280;1000&format=webp&imagetools';
-	import Sypialnia2Img from '$lib/images/sypialnia2.jpg?width=280;1000&format=webp&imagetools';
-	import SchodyImg from '$lib/images/schody.jpg?width=280;1000&format=webp&imagetools';
+	import Img0 from '$lib/images/0fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img1 from '$lib/images/1fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img2 from '$lib/images/2fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img3 from '$lib/images/3fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img4 from '$lib/images/4fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img5 from '$lib/images/5fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img6 from '$lib/images/6fx.jpg?width=280;1000&format=webp&imagetools';
+	import Img7 from '$lib/images/7fx.jpg?width=280;1000&format=webp&imagetools';
+
 	import TarasImg from '$lib/images/taras.jpg?width=280;1000&format=webp&imagetools';
 	import RoweryImg from '$lib/images/rowery.jpg?width=280;1000&format=webp&imagetools';
 	import PlacImg from '$lib/images/plac.jpg?width=280;1000&format=webp&imagetools';
 	import Morze3Img from '$lib/images/morze3.jpg?width=280;1000&format=webp&imagetools';
 
 	const imgList = [
-		KuchniaImg,
-		SalonImg,
-		LazienkaImg,
-		Lazienka2Img,
-		SypialniaImg,
-		Sypialnia2Img,
-		SchodyImg,
+		Img0,
+		Img1,
+		Img2,
+		Img3,
+		Img4,
+		Img5,
+		Img6,
+		Img7,
 		TarasImg,
 		RoweryImg,
 		PlacImg,
-		Morze3Img,
-	]
+		Morze3Img
+	];
 
 	onMount(() => {
 		baguetteBox.run('.gallery', {
-			filter: new RegExp(''),
-		})
-	})
+			filter: new RegExp('')
+		});
+	});
 </script>
 
 <section id="galeria" class="section divider gallery">
@@ -72,7 +75,7 @@
 		cursor: zoom-in;
 		&:hover,
 		&:focus {
-			opacity: .8;
+			opacity: 0.8;
 		}
 		@include from-portrait {
 			flex-basis: 25%;
