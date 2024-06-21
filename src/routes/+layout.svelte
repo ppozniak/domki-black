@@ -49,7 +49,14 @@
 					"addressCountry": "pl",
 					"postalCode": "76-034"
 				},
-				"sameAs": ["https://www.facebook.com/BlackSarbinowo/", "https://www.instagram.com/domki.black/"]
+				"sameAs": [
+					"https://www.facebook.com/BlackSarbinowo/", 
+					"https://www.instagram.com/domki.black/", 
+					"https://www.nocowanie.pl/noclegi/sarbinowo/domki/163718/", 
+					"https://www.e-wczasy.pl/noclegi/sarbinowo/domki/black-sarbinowo,13591", 
+					"https://meteor-turystyka.pl/black-sarbinowo,sarbinowo.html", 
+					"https://www.restugo.com/pl/domkiblacksarbinowo"
+				]
 			}
 	</script>
 </svelte:head>
